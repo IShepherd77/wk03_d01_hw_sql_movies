@@ -83,4 +83,14 @@ SELECT * FROM movies;
 -- ## Extension
 --
 -- 1.  Research how to delete multiple entries from your table in a single command.
-DELETE FROM 
+DELETE FROM movies WHERE id BETWEEN 3 AND 5;
+SELECT * FROM movies;
+
+DELETE FROM people WHERE name LIKE '%Simpson%';
+SELECT * FROM people;
+
+DELETE FROM movies WHERE show_time > '20:00';
+SELECT * FROM movies;
+
+DELETE FROM movies WHERE year <= '2010';
+SELECT * FROM movies;
