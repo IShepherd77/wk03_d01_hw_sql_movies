@@ -191,6 +191,7 @@ SELECT name FROM people;
 
 -- -- 7.  Eric Cartman has decided to hijack our movie evening, Remove him from the table of people.
 DELETE FROM people WHERE name = 'Eric Cartman';
+-- DELETE FROM people WHERE id = 11;
 SELECT name FROM people;
 
 -- DELETE 1
@@ -246,6 +247,8 @@ SELECT * FROM movies;
 SELECT show_time FROM movies WHERE title = 'Iron Man 2';
 UPDATE movies SET show_time = '20:45' WHERE title = 'Iron Man 3';
 SELECT * FROM movies;
+
+
 
 -- show_time
 -- -----------
@@ -367,3 +370,12 @@ SELECT * FROM movies;
 --  20 | Avengers: Infinity War              | 2019 | 00:00
 --   7 | Iron Man 3                          | 2013 | 20:45
 -- (16 rows)
+
+
+--NESTED SELECT
+-- UPDATE movies
+-- SET TITLE = 'Jaws 2'
+-- WHERE id IN (SELECT id FROM movies WHERE id = 22)
+
+DELETE FROM movies WHERE id IN (1, 2, 3);
+SELECT * FROM movies;
